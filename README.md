@@ -2,7 +2,7 @@
 
 Inspect suspicious **PDFs and legacy Office (OLE/CFB) documents** without opening them in a viewer. This MIT-licensed Linux toolkit reports file signatures, selected metadata, and structural evidence through a Python API, CLI, or local MCP server. It does not execute document content or give a malware verdict.
 
-Use the [engineering field book](docs/wiki/Home.md) to look up magic bytes, PDF objects and cross-references, image and JavaScript locations, and Office stream layout.
+Use the [engineering field book](https://technomancer.work/projects/forensic-maldoc-plugin/field-book/) to look up magic bytes, PDF objects and cross-references, image and JavaScript locations, and Office stream layout. The [versioned Markdown source](docs/wiki/Home.md) is also available here.
 
 **Using Claude Code or Codex?** Point your assistant to the [agent setup guide](docs/agent-setup.md). It explains what to install, what needs your approval, and how to verify the connection with a generated fixture.
 
