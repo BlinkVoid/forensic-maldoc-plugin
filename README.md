@@ -2,6 +2,8 @@
 
 A local toolkit for read-only PDF and OLE/CFB triage, with a **field book** for engineers who need to look up file structures and interpret evidence.
 
+**Using Claude Code or Codex?** Point your assistant to the [agent setup guide](docs/agent-setup.md). It explains what to install, what needs your approval, and how to verify the connection with a generated fixture.
+
 | Need to find… | Start here |
 | --- | --- |
 | File signatures and magic bytes | [File signatures](docs/wiki/File-Signatures.md) |
