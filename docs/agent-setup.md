@@ -8,7 +8,7 @@ Use this guide for **local stdio MCP**, not a marketplace plugin or a hosted con
 
 For an agent: confirm the client, the target workspace, and whether any persistent settings change is wanted. Reuse a trusted checkout if one exists; do not overwrite an existing MCP entry or another project's settings. If the client runs on a different machine, build and stage there. Do not assume access to the user's local filesystem from a hosted session.
 
-The host running the MCP process needs Linux, Git, `uv`, Python 3.11+, and `/usr/bin/bwrap` with unprivileged user namespaces. Check prerequisites before proceeding. If Bubblewrap is blocked, keep the failure visible and stop; do not use elevated privileges, change kernel settings, or run the parser unsandboxed.
+The host running the MCP process needs Linux, Git, `uv`, Python 3.14, and `/usr/bin/bwrap` with unprivileged user namespaces. Check prerequisites before proceeding. If Bubblewrap is blocked, keep the failure visible and stop; do not use elevated privileges, change kernel settings, or run the parser unsandboxed.
 
 From a directory chosen for installing tools (not an evidence directory), run:
 

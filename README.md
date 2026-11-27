@@ -1,6 +1,8 @@
-# Forensic Maldoc Plugin
+# Forensic Maldoc Plugin — PDF and Office document triage
 
-A local toolkit for read-only PDF and OLE/CFB triage, with a **field book** for engineers who need to look up file structures and interpret evidence.
+Inspect suspicious **PDFs and legacy Office (OLE/CFB) documents** without opening them in a viewer. This MIT-licensed Linux toolkit reports file signatures, selected metadata, and structural evidence through a Python API, CLI, or local MCP server. It does not execute document content or give a malware verdict.
+
+Use the [engineering field book](docs/wiki/Home.md) to look up magic bytes, PDF objects and cross-references, image and JavaScript locations, and Office stream layout.
 
 **Using Claude Code or Codex?** Point your assistant to the [agent setup guide](docs/agent-setup.md). It explains what to install, what needs your approval, and how to verify the connection with a generated fixture.
 
@@ -14,12 +16,12 @@ A local toolkit for read-only PDF and OLE/CFB triage, with a **field book** for 
 
 ## Set up
 
-Use Linux, Python 3.11+, and `/usr/bin/bwrap` with unprivileged user namespaces enabled. Start with a benign fixture on a new host. Keep samples and reports outside Git in analyst-controlled directories.
+Use Linux, Python 3.14, `uv`, and `/usr/bin/bwrap` with unprivileged user namespaces enabled. Start with a generated fixture on a new host. Keep samples and reports outside Git in analyst-controlled directories.
 
 ```sh
 uv sync --locked --extra mcp
 staging=$(mktemp -d)
-python3 -m labs.fixtures "$staging"
+uv run --locked python -m labs.fixtures "$staging"
 uv run --locked forensic-maldoc assess --staging "$staging" wrapper-lookalike.docx
 uv run --locked forensic-maldoc ole --staging "$staging" named-only.cfb
 ```
